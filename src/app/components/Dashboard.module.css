@@ -1,0 +1,155 @@
+.dashboard {
+  min-height: calc(100dvh - 65px);
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 2;
+  top: 65px;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 232px;
+  flex-direction: column;
+  gap: 28px;
+  overflow-y: auto;
+  padding: 28px 18px;
+  border-right: 1px solid #d5dfda;
+  background: #f1f6f3;
+}
+
+.sidebarTitle {
+  color: #65736c;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sideNav {
+  display: grid;
+  gap: 6px;
+}
+
+.sideLink {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 4px;
+  color: #34413b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sideLinkActive {
+  background: #dcebe2;
+  color: #205f3c;
+}
+
+.content {
+  height: calc(100dvh - 65px);
+  margin-left: 232px;
+  overflow-y: auto;
+  padding: 36px clamp(20px, 4vw, 56px) 56px;
+  background: #fbfcfb;
+}
+
+.contentInner {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.eyebrow {
+  margin-bottom: 7px;
+  color: #65736c;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pageHeader h1 {
+  color: #202b27;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.createButton {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 5px;
+  background: #1d604b;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.createButton:hover {
+  background: #154d3c;
+}
+
+.createButton:focus-visible,
+.sideLink:focus-visible {
+  outline: 3px solid #2e765d;
+  outline-offset: 3px;
+}
+
+.tableSection h2 {
+  margin-bottom: 12px;
+  color: #34413b;
+  font-size: 16px;
+}
+
+@media (max-width: 720px) {
+  .sidebar {
+    position: static;
+    width: auto;
+    min-height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 16px;
+    border-right: 0;
+    border-bottom: 1px solid #d5dfda;
+  }
+
+  .sideNav {
+    display: flex;
+    gap: 4px;
+  }
+
+  .sideLink {
+    min-height: 38px;
+    padding: 0 10px;
+  }
+
+  .content {
+    height: auto;
+    min-height: 60dvh;
+    margin-left: 0;
+    overflow: visible;
+    padding: 28px 16px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebarTitle {
+    display: none;
+  }
+
+  .pageHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

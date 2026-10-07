@@ -1,0 +1,42 @@
+.card {
+  display: block;
+  width: min(100%, 420px);
+  margin-block: 12px;
+  padding: 16px;
+  border: 1px solid #d5dfda;
+  border-radius: 6px;
+  background: #fff;
+  color: #202b27;
+}
+
+.card h2 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.card p + p {
+  margin-top: 4px;
+}
+
+.cardLink {
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.cardLink:hover {
+  border-color: #6c8d80;
+  background: #f3f8f5;
+}
+
+.cardLink:focus-visible {
+  outline: 3px solid #2e765d;
+  outline-offset: 3px;
+}
+
+.cardAction {
+  display: inline-block;
+  margin-top: 12px;
+  color: #1d604b;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

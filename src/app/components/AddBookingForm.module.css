@@ -1,0 +1,79 @@
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.form label {
+  display: grid;
+  gap: 7px;
+  color: #34413b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  min-height: 42px;
+  padding: 0 11px;
+  border: 1px solid #c9d4ce;
+  border-radius: 4px;
+  background: #fff;
+  color: #202b27;
+  font: inherit;
+}
+
+.input:focus-visible {
+  outline: 3px solid #2e765d;
+  outline-offset: 1px;
+}
+
+.input[aria-invalid="true"] {
+  border-color: #b42318;
+}
+
+.fieldError,
+.errorSummary {
+  color: #a1261c;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.errorSummary {
+  padding: 10px 12px;
+  border-left: 3px solid #b42318;
+  background: #fff1f0;
+  font-size: 13px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #1d604b;
+}
+
+.form label:has(.checkbox) {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.submitButton {
+  min-height: 42px;
+  margin-top: 4px;
+  border: 0;
+  border-radius: 4px;
+  background: #1d604b;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background: #154d3c;
+}
+
+.submitButton:focus-visible {
+  outline: 3px solid #2e765d;
+  outline-offset: 3px;
+}
